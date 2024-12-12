@@ -1,0 +1,160 @@
+html,*{padding: 0;margin: 0;}
+:root
+{
+    --main-color:var(--main-color);
+    --main-color-light:#ffff00c0;
+    --Text-color:#fff;
+    --bg-color:#000;
+
+    --pink-deg-1:#c591e6;
+    --pink-deg-2:#c691e6;
+    --pink-khfif:#afaeae55;
+    --light-blue:#89a5df;
+    --light-orange:#e46e7f;
+    --main-color-light:#e8e191;
+}
+/* Star Global Variables */
+.active{font-weight: bolder;}
+.fa-solid{color: var(--Text-color);}
+.colored{color: var(--main-color) !important;}
+.bg-colored{background: var(--main-color);}
+.bordered-50{border-radius: 50% !important;}
+.bordered-2{border-radius: 2rem !important;}
+.btn-colored
+{
+    padding: 10px 20px;
+    border-radius: 12px;
+    outline: 0;
+    border: 0;
+    font-weight: 400;
+    background: var(--main-color) !important;
+    color: var(--bg-color) !important;
+    white-space: nowrap;
+}
+.flex,
+.flex-column,
+.flex-center,
+.flex-between,
+.flex-around,
+.flex-evenly{display: flex;align-items: center;}
+.flex-between{justify-content: space-between;}
+.flex-around{justify-content: space-around;}
+.flex-evenly{justify-content: space-evenly;}
+.flex-column{flex-direction: column;}
+.line-clamp
+{
+    --max-lines: 1;
+    font-weight: 500;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--max-lines);
+}
+.w-70{width: 70%;}
+.w-80{width: 80%;}
+.list-style-none{list-style:none;}
+a{text-align: none;color: var(--Text-color);}
+.orangred{color: var(--main-color);}
+.bg-orangred{background-color: var(--main-color);}
+.scroller-y::-webkit-scrollbar{background: transparent;width: 6px;border-radius: 20px;}
+.scroller-y::-webkit-scrollbar-thumb{background: transparent;width: 6px;border-radius: 20px;}
+.scroller-x::-webkit-scrollbar{background: transparent;height: 6px;border-radius: 20px;}
+.scroller-x::-webkit-scrollbar-thumb{background: transparent;height: 6px;border-radius: 20px;}
+body.light-mood{--main-color:blue;--main-color-light:rgba(0, 0, 255, 0.74);--Text-color:#000;--bg-color:#f0e4e4c0;}
+body
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-height:100vh;
+    min-height:100dvh;
+    max-width: 100vw;
+    color: var(--Text-color) !important;
+    background: var(--pink-khfif);
+    overflow-x: hidden !important;
+    scroll-padding-top: .5rem;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-thumb{display: none;}
+/* ******************** start styling the hedaer ********************/
+nav{background: transparent !important;color: var(--Text-color) !important;z-index: 100 !important;}
+.nav-link{color: var(--Text-color) !important;font-weight: bolder !important;text-decoration: none !important;}
+.nav-link.active{color: var(--main-color) !important;}
+a,
+.logo a,
+.fa-bars,
+.navbar-brand,
+.footer-logo{color: var(--Text-color) !important; text-decoration: none !important;}
+.customers-img{position:relative;}
+.customers-img img:nth-child(1){right: 0rem;}
+.customers-img img:nth-child(2){right: 2rem;}
+.customers-img img:nth-child(3){right: 4rem;}
+.customers-img img:nth-child(4){right: 6rem;}
+.customers-img img
+{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: solid var(--bg-color);
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+}
+.progress
+{
+    padding: 0 2rem 8rem 2rem;
+    background: transparent !important;
+    overflow: hidden;
+    border:solid 1px var(--main-color);
+    background: var(--Text-color) !important;
+    color: var(--bg-color) !important;
+}
+.progress.active{background: var(--main-color) !important;}
+.progress .text-desc{font-size: 1rem;}
+.fa-phone{font-size: 2rem;}
+/* *************************** About page ******************************/
+.font-style-itealic{font-style: italic!important;}
+/* ? adding the gradient color to a text */
+.text-gradient-color
+{
+  background: linear-gradient(to right, var(--main-color),#e46e7f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: 2.5rem;
+}
+.special-btn:hover{background-color: var(--main-color-light);color: #040018;box-shadow: 0 0 50px var(--main-color);}
+.special-btn
+{
+    all: unset;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.main-body .about-inner
+{
+    position: relative;
+    top: 0%;
+    right:10vw;
+    height: max-content;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 .3rem 20px -4px var(--Text-color);
+}
+/* ******************** Preview Projects Page ****************************/
+.main-cover-holder {position: relative !important;height: 60vh;max-width:100%;margin: auto;}
+.main-cover-holder .main-img{position: absolute;height: 100%;width: 100%;object-fit: cover;transition:All .5s ease-out;}
+.avatar{height: 3rem;width: 3rem;margin: auto;}
+.Pro_card_inner{border: solid 1px #fff;border-radius: .7rem;overflow: hidden;cursor: pointer !important;}
+.Pro_card_inner:hover{box-shadow: 0 .3rem 20px -4px var(--main-color-light);transition: .2s ease-in;}
+.Pro_card_inner img{width: 100% !important;}
+.small_carousel::-webkit-scrollbar-thumb{background: var(--main-color);border-radius: 1rem;height: 6px;}
+.small_carousel::-webkit-scrollbar{background: transparent;height: 6px;}
+.small_carousel{width: 100%;}
+.s-carousel_cover{height: 10rem;}
+.footer_inner{background: var(--light-blue);}
+.TileCard{position: relative !important;height: 100vh;}
+.TileCard  img{height: 100%;width: 100%;object-fit: cover;box-shadow: 0 .3rem 3rem -.2rem var(--main-color-light);}
+

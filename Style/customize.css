@@ -1,0 +1,47 @@
+@media screen and (min-width:992px){
+    header
+    {
+        -webkit-backdrop-filter: blur(39px);
+        backdrop-filter: blur(39px);
+    }
+    .navbar-nav{
+        translate: 60% 0;
+    }
+    .contact-section {
+        translate: 0 -100%;
+    }
+    .hero-holder .text
+    {
+        max-width: 50%;
+    }
+    .main-body .about-inner{width: 70%;}
+}
+@media (min-width:600px) and (max-width:992px){.project-container{display: flex !important;justify-content: space-between;}}
+@media screen and (max-width:768px)
+{
+    .row{flex-direction: column;}
+    .contact-3{transform: translateY(30%);}
+    .main-body .about-inner{padding: .7rem !important;}
+    .main-body .about-inner{right: 0vw;}
+    .TileCard{width: 100vw !important;}
+}
+@media screen and (max-width:425px){
+    header{margin-bottom: 3rem !important;}
+    .cover-holder img
+    {
+        position: absolute;
+        top:0;
+        right:0;
+        height: 90%;
+        width:100%;
+        z-index: -1;
+        opacity: .4;
+    }
+    .hero-holder .text{width: 100vw;translate: 0 -30% !important;}
+}
+@media screen and (max-width:992px) {
+    .skills-holder .row:nth-child(2) .skil-card,
+    .skills-holder .row:nth-child(4) .skil-card{background: yellow !important; translate: 0 -60vh !important;}
+    .TileCard  img{filter: brightness(66%);}
+    .TileCard  img:hover{filter: brightness(100%);}
+}

@@ -1,0 +1,108 @@
+<script>
+    const PreviewComponenet = {
+        /* <section id="main-container" class=" py-5">
+          <div class="mb-2">
+              <h1 class="h4 fw-bold my-2">رقم المشروع :#1 🏠</h1>
+              <div class="immage-previewr my-2 mx-auto">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <ul class="project_dethails">
+                            <li class="det_item list-style-none pro-local">الموقع 📌: <em class="location">أكادير</em></li>
+                            <li class="det_item list-style-none date-time">التاريخ ⏲️ : <span class="from">06/03/2022 </span>|| <span class="at">03/04/2024</span></li>
+                        </ul>
+                        <h1 class="h4 fw-bold my-2 Zlije-card">زليج ⚒️ :</h1>
+                        <ul class="det_item list-style-none Zlij_D">
+                            <li class="det_item list-style-none Zlij_type">النوع : إجباري</li>
+                            <li class="det_item list-style-none Zlij_size">الحجم : <span class="size">كبير</span></li>
+                            <li>الطول : <span class="height">120 سم</span></li>
+                            <li>العرض : <span class="height">60 سم</span></li>
+                        </ul>
+                        <div class="team-container">
+                          <h1 class="h4 fw-bold my-2">فريق العمل 👲</h1>
+                          <div class="team-work d-flex align-center gap-5 flex-wrap">
+                              <div class="team-item text-center ">
+                                  <img src="./SRC/img/man-2.avif" alt="" class="avatar mb-3 bordered-50">
+                                  <h6 class="colored text-center text">أيوب العُماري</h6>
+                                  <ul class="social-links d-flex align-center gap-2">
+                                    <a href="https://www.facebook.com/profile.php?id=100076152471687" class="social-link">
+                                      <li class="fab fa-facebook fa"></li>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                  <i class="fa-brands fa-whatsapp"></i>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                      <i class="fa-solid fa-phone" style="scale: .5 !important;translate: 0 -15% !important;"></i>
+                                    </a>
+                                  </ul>
+                              </div>
+                              <div class="team-item text-center ">
+                                  <img src="./SRC/img/man-with-tarboush.avif" alt="" class="avatar mb-3 bordered-50">
+                                  <h6 class="colored text-center text">عبد اللطيف</h6>
+                                  <ul class="social-links d-flex align-center gap-2">
+                                    <a href="https://www.facebook.com/profile.php?id=100076152471687" class="social-link">
+                                      <li class="fab fa-facebook fa"></li>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                  <i class="fa-brands fa-whatsapp"></i>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                      <i class="fa-solid fa-phone" style="scale: .5 !important;translate: 0 -15% !important;"></i>
+                                    </a>
+                                  </ul>
+                              </div>
+                              <div class="team-item text-center ">
+                                  <img src="./SRC/img/man-4.avif" alt="" class="avatar mb-3 bordered-50">
+                                  <h6 class="colored text-center text">مصطفى</h6>
+                                  <ul class="social-links d-flex align-center gap-2">
+                                    <a href="https://www.facebook.com/profile.php?id=100076152471687" class="social-link">
+                                      <li class="fab fa-facebook fa"></li>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                      <i class="fa-brands fa-whatsapp"></i>
+                                    </a><a href="tel:+212668914152" class="social-link">
+                                      <i class="fa-solid fa-phone" style="scale: .5 !important;translate: 0 -15% !important;"></i>
+                                    </a>
+                                  </ul>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-6 mb-3">
+                        <div class="main-cover-holder">
+                            <video src="./SRC/img/video-music.mp4" loop muted autoplay controls class="main-img border-2" id="man-img"></video>
+                        </div>
+                     </div>
+              </div>
+          </div>
+           <div class="small_carousel d-flex align-center gap-4 overflow-x-scroll pb-3">
+                <img src="./SRC/img/villa-2.avif" onclick="togglemainimg(this);" alt="" class="s-carousel_cover">
+                <img src="./SRC/img/villa-3.avif" onclick="togglemainimg(this);" alt="" class="s-carousel_cover">
+                <img src="./SRC/img/villa-4.avif" onclick="togglemainimg(this);" alt="" class="s-carousel_cover">
+                <img src="./SRC/img/villa-1.avif" onclick="togglemainimg(this);" alt="" class="s-carousel_cover">
+                <img src="./SRC/img/villa-2.avif" onclick="togglemainimg(this);" alt="" class="s-carousel_cover">
+                <video src="./SRC/img/video-music.mp4" onclick="togglemainimg(this);" autoplay loop muted alt="" class="s-carousel_cover"></video>
+            </div>
+       </section> */
+    }
+    const returnMainCard = ` ${(() => {
+                    if (Array.isArray(team_work) && team_work.length > 0) {
+                      console.log(team_work);
+                      return team_work.map(item => `
+                        <div class="team-item text-center">
+                          <img src="${item.Avatar}" alt="" class="avatar mb-3 bordered-50">
+                          <h6 class="colored text-center text">${item.name}</h6>
+                          <ul class="social-links d-flex align-center gap-2">
+                            <a href="${item.social_media.facebook}" class="social-link">
+                              <li class="fab fa-facebook fa"></li>
+                            </a>
+                            <a href="tel:${item.social_media.whatsapp}" class="social-link">
+                              <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="tel:${item.social_media.phone}" class="social-link">
+                              <i class="fa-solid fa-phone" style="scale: .5 !important; translate: 0 -15% !important;"></i>
+                            </a>
+                          </ul>
+                        </div>
+                      `).join('');
+                    } else {
+                      return `${console.log('there was an error')}`;
+                    }
+                  })()
+                }`;
+
+</script>
